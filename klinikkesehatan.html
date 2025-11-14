@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Klinik Sehat</title>
+
+    </head>
+<body>
+    <div class="container">
+        <h1>Formulir Pendaftaran Pasien</h1>
+        
+        <form action="/proses-klinik" method="post">
+            
+            <div class="form-group">
+                <label for="nama_pasien">Nama Pasien:</label>
+                <input type="text" id="nama_pasien" name="nama_pasien" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="pass_pasien">Buat Password Portal Pasien:</label>
+                <input type="password" id="pass_pasien" name="password" required>
+            </div>
+            
+            <div class="form-group check-radio-group">
+                <label>Status Pasien:</label>
+                <input type="radio" id="pasien_baru" name="status_pasien" value="baru">
+                <label for="pasien_baru">Pasien Baru</label>
+                
+                <input type="radio" id="pasien_lama" name="status_pasien" value="lama">
+                <label for="pasien_lama">Pasien Lama</label>
+            </div>
+            
+            <div class="form-group">
+                <label for="poli">Pilih Poli Tujuan:</label>
+                <select id="poli" name="poli_tujuan">
+                    <option value="">--Pilih Poli--</option>
+                    <option value="umum">Poli Umum</option>
+                    <option value="gigi">Poli Gigi</option>
+                    <option value="anak">Poli Anak</option>
+                    <option value="kulit">Poli Kulit</option>
+                </select>
+            </div>
+
+            <div class="form-group check-radio-group">
+                <label>Keluhan yang Dirasakan:</label>
+                <input type="checkbox" id="demam" name="keluhan_demam" value="ya">
+                <label for="demam">Demam</label>
+                
+                <input type="checkbox" id="batuk" name="keluhan_batuk" value="ya">
+                <label for="batuk">Batuk/Pilek</label>
+                
+                <input type="checkbox" id="pusing" name="keluhan_pusing" value="ya">
+                <label for="pusing">Pusing</label>
+
+                <input type="checkbox" id="lainnya" name="keluhan_lainnya" value="ya">
+                <label for="lainnya">Lainnya</label>
+            </div>
+            
+            <div class="form-group">
+                <label for="deskripsi_keluhan">Deskripsikan Keluhan Anda:</label>
+                <textarea id="deskripsi_keluhan" name="deskripsi_keluhan" rows="5"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Kirim Pendaftaran">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
