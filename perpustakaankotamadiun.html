@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Perpustakaan Madiun</title>
+
+    </head>
+<body>
+
+    <div class="container">
+        <h1>Formulir Pendaftaran Perpustakaan</h1>
+        
+        <form action="/proses-pendaftaran" method="post">
+            
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama_lengkap" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="pass">Buat Password Akun:</label>
+                <input type="password" id="pass" name="password" required>
+            </div>
+            
+            <div class="form-group radio-group">
+                <label>Jenis Keanggotaan:</label>
+                <input type="radio" id="mahasiswa" name="jenis_anggota" value="mahasiswa">
+                <label for="mahasiswa">Mahasiswa</label>
+                
+                <input type="radio" id="umum" name="jenis_anggota" value="umum">
+                <label for="umum">Umum</label>
+            </div>
+            
+            <div class="form-group">
+                <label for="kategori">Kategori Buku Favorit:</label>
+                <select id="kategori" name="kategori_favorit">
+                    <option value="">--Pilih Kategori--</option>
+                    <option value="fiksi">Fiksi</option>
+                    <option value="non_fiksi">Non-Fiksi</option>
+                    <option value="sains">Sains & Teknologi</option>
+                    <option value="sejarah">Sejarah</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="alamat">Alamat:</label>
+                <textarea id="alamat" name="alamat" rows="4"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <input type="checkbox" id="setuju" name="setuju_syarat" required>
+                <label for="setuju" style="display: inline-block; font-weight: normal;">Saya setuju dengan syarat dan ketentuan.</label>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Daftar">
+            </div>
+            
+        </form>
+    </div>
+
+</body>
+</html>
